@@ -51,7 +51,3 @@ Você pode testar o projeto através do link de simulação do Wokwi:
 - **ArduinoJson**
 - **PubSubClient**
 - **RTClib**
-
-
-## 🎥 Vídeo Explicativo
-[Link para o vídeo demonstrativo](URL_DO_VIDEO)
