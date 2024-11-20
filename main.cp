@@ -26,7 +26,7 @@ const float RL10 = 50;
 
 // Resolução analógica do ESP32
 #define ADC_MAX 4095
-#define V_REF 3.3
+#define V_REF 5
 
 int valorAnterior = 0;
 #define SDA_PIN 12
@@ -103,7 +103,6 @@ void saveLuminosity(float lux) {
     data["time"] = time;
     data["luminosity"] = lux;
     data["local"] = lugar;
-    // data["status"] = day;
 
 
     // Serializar o JSON para uma string
@@ -119,7 +118,6 @@ void verifyLuminosity() {
     if (analogValue == valorAnterior) return;
     valorAnterior = analogValue;
 
-    // Ajuste de cálculo considerando tensão de referência 3.3V
     float voltage = analogValue / float(ADC_MAX) * V_REF;
     float resistance = 2000 * voltage / (1 - voltage / V_REF);
     float lux = pow(RL10 * 1e3 * pow(10, GAMMA) / resistance, (1 / GAMMA));
