@@ -1,5 +1,9 @@
 # Projeto de Monitoramento de Luminosidade com ESP32 e MQTT
 
+## **👥 Membros do Grupo**:
+- Andrey Rodrigues Nagata - RM: 555339
+- Henrique Soubhia - RM: 554493
+
 ## 📋 Descrição
 Este projeto utiliza um **ESP32** e um sensor LDR para monitorar mudanças na luminosidade de um ambiente. A cada alteração detectada, o ESP32 registra o horário e o nível de luminosidade, enviando esses dados via **MQTT** para um servidor. O sistema é ideal para monitorar se luzes estão ligadas ou desligadas em um ambiente, contribuindo para o uso eficiente de energia.
 
